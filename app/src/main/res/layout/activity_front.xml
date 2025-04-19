@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8B7D4"
+    android:clickable="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/logo"
+            android:scaleType="centerInside"
+            android:elevation="4dp" />
+
+        <TextView
+            android:id="@+id/evermed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EverMed"
+            android:textColor="#311b4f"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
+
+</RelativeLayout>
