@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient">
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomNav"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Back Arrow -->
+            <ImageView
+                android:id="@+id/back_arrow"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/backarrow"
+                android:contentDescription="Back"
+                android:layout_gravity="start"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Doctor Info Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <!-- Doctor Avatar -->
+                <ImageView
+                    android:id="@+id/doctor_image"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/doctor_avatar"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="16dp"
+                    android:contentDescription="Doctor Image" />
+
+                <!-- Doctor Details -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/doctor_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Anmol Sharma"
+                        android:textStyle="bold"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/doctor_age_gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Age-45 • Male" />
+
+                    <TextView
+                        android:id="@+id/doctor_specialty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Specialty: Cardiology" />
+
+                    <TextView
+                        android:id="@+id/doctor_degree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="M.D. — 15 years experience" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Verification Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="24dp">
+
+                <!-- Verification ID Label -->
+                <TextView
+                    android:id="@+id/verification_id_label"
+                    android:layout_width="124dp"
+                    android:layout_height="28dp"
+                    android:text="Verification ID"
+                    android:gravity="center"
+                    android:textColor="#B00020"
+                    android:textSize="12sp"
+                    android:background="@drawable/verification_id_bg" />
+
+                <!-- Spacer -->
+                <View
+                    android:layout_width="16dp"
+                    android:layout_height="0dp" />
+
+                <!-- ID Number -->
+                <TextView
+                    android:id="@+id/verification_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6A721D59"
+                    android:textStyle="bold"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#CCCCCC"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Patients Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Patients"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#B00020"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/view_patients_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="View added patients"
+                android:backgroundTint="#B00020"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Permissions Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Permissions"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#B00020"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/access_records_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ask to access records by ID"
+                android:background="@drawable/verification_id_bg"
+                android:textColor="#000000"
+                android:layout_marginBottom="12dp" />
+
+            <Button
+                android:id="@+id/save_records_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save patient records"
+                android:background="@drawable/verification_id_bg"
+                android:textColor="#000000"
+                android:layout_marginBottom="24dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="#000000"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="16dp"
+            android:src="@drawable/home"
+            app:tint="#FFFFFF"
+            android:contentDescription="Home" />
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="16dp"
+            android:src="@drawable/records"
+            app:tint="#FFFFFF"
+            android:contentDescription="Records" />
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="16dp"
+            android:src="@drawable/user"
+            app:tint="#FFFFFF"
+            android:contentDescription="Profile" />
+    </LinearLayout>
+</RelativeLayout>
+
