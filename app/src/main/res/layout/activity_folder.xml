@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:padding="16dp"
+    android:radius="20dp">
+
+    <!-- White rounded rectangle -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="@drawable/bg_white_rounded"
+        android:padding="16dp">
+
+        <!-- Search Bar -->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Search"
+            android:padding="12dp"
+            android:background="@drawable/bg_search"
+            android:drawableStart="@drawable/search_icon"
+            android:layout_marginBottom="24dp"
+            android:drawablePadding="8dp"
+            android:textColor="#000000"
+            android:textSize="16sp"/>
+
+        <LinearLayout
+            android:id="@+id/folderContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp" />
+
+        <!-- Add Folder Button at bottom -->
+        <Button
+            android:id="@+id/btnAddFolder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+ Add Folder"
+            android:background="@drawable/bg_add_folder"
+            android:textColor="#000"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="48dp" />
+
+        <!-- Folder: Asthma -->
+        <LinearLayout
+            android:id="@+id/asthma"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_folder"
+            android:padding="12dp"
+            android:layout_marginBottom="48dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/records"
+                android:contentDescription="Folder Icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Asthma"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:layout_marginStart="12dp"/>
+        </LinearLayout>
+
+        <!-- Folder: Diabetes -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_folder"
+            android:padding="12dp"
+            android:layout_marginBottom="48dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/records"
+                android:contentDescription="Folder Icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Diabetes"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:layout_marginStart="12dp"/>
+        </LinearLayout>
+
+        <!-- Folder: Hypertension -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_folder"
+            android:padding="12dp"
+            android:layout_marginBottom="48dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/records"
+                android:contentDescription="Folder Icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hypertension"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:layout_marginStart="12dp"/>
+        </LinearLayout>
+
+        <!-- Add Folder Button -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Folder"
+            android:textColor="#000000"
+            android:drawableStart="@drawable/ic_add"
+            android:drawablePadding="8dp"
+            android:background="@drawable/bg_add_folder"
+            android:padding="12dp"/>
+    </LinearLayout>
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="#000000"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="16dp"
+            android:src="@drawable/home"
+            app:tint="#FFFFFF"
+            android:contentDescription="Home" />
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="16dp"
+            android:src="@drawable/records"
+            app:tint="#FFFFFF"
+            android:contentDescription="Records" />
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="16dp"
+            android:src="@drawable/user"
+            app:tint="#FFFFFF"
+            android:contentDescription="Profile" />
+    </LinearLayout>
+</LinearLayout>
